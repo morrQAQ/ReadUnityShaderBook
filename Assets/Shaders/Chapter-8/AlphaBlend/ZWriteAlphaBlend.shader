@@ -82,3 +82,5 @@ Shader  "tongchan/8/zwrite-alpha-blend"
     }
     Fallback  "Diffuse"
 }
+
+//Primitive
