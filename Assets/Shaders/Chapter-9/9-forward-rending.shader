@@ -134,6 +134,10 @@ Shader "tongchan/9/forward-rending"
                 fixed3 halfDir = normalize(worldLightDir + viewDir);
                 fixed3 specular = _LightColor0.rgb * _Specular.rgb * pow(max(0, dot(worldNormal, halfDir)), _Gloss);
                 
+                // #ifdef and #if defined are used to check if a macro has been defined. 
+                // The difference between the two is that #ifdef can only use a single condition, 
+                // while #if defined can do compound conditionals1. For example, 
+                // you can use #if defined (WIN32) && !defined (UNIX) to check if WIN32 is defined and UNIX is not defined1.
                 #ifdef USING_DIRECTIONAL_LIGHT
                 fixed atten = 1.0;
                 #else
@@ -156,5 +160,3 @@ Shader "tongchan/9/forward-rending"
     }
     FallBack "Specular"
 }
-//light color 是light color ,atten 是atten light color 不包含衰减过的.light color 只是字面意思
-//光源空间
