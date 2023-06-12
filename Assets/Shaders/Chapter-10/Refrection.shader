@@ -14,6 +14,8 @@ Shader "tongchan/10/refraction"
 
     SubShader
     {
+        Tags { "RenderType"="Opaque" "Queue"="Geometry"}
+        
         Pass
         {
             Tags { "LightMode"="ForwardBase" }
