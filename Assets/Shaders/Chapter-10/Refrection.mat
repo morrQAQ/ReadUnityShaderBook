@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Refrection
+  m_Name: refrection
   m_Shader: {fileID: 4800000, guid: fccb2607daaa44eebaeeb190bdea64b7, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
