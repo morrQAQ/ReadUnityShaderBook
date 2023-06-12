@@ -6,10 +6,10 @@ Shader "tongchan/10/refraction"
     Properties  
     {
         _Color  ("Color  Tint",  Color)  =  (1,  1,  1,  1)
-        _RefractColor  ("Refraction  Color",  Color)  =  (1,  1,  1,  1)
-        _RefractAmount  ("Refraction  Amount",  Range(0,  1))  =  1
-        _RefractRatio  ("Refraction  Ratio",  Range(0.1,  1))  =  0.5   //透射比
-        _Cubemap  ("Refraction  Cubemap",  Cube)  =  "_Skybox"  {}
+        _RefrectColor  ("Refrection  Color",  Color)  =  (1,  1,  1,  1)
+        _RefrectAmount  ("Refrection  Amount",  Range(0,  1))  =  1
+        _RefractRatio  ("Refrection  Ratio",  Range(0.1,  1))  =  0.5   //透射比
+        _Cubemap  ("Refrection  Cubemap",  Cube)  =  "_Skybox"  {}
     }
 
     SubShader
