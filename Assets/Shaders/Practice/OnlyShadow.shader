@@ -7,10 +7,8 @@ Shader "Custom/TransparentShadowCollector"
         _ShadowIntensity ("Shadow Intensity", Range (0, 1)) = 0.6
     }
     
-    
     SubShader
     {
-        
         Tags {"Queue"="AlphaTest" }
         
         Pass
@@ -40,6 +38,7 @@ Shader "Custom/TransparentShadowCollector"
                 
                 return o;
             }
+
             fixed4 frag(v2f i) : COLOR
             {
                 float attenuation = LIGHT_ATTENUATION(i);
@@ -47,7 +46,8 @@ Shader "Custom/TransparentShadowCollector"
             }
             ENDCG
         }
-        
     }
     Fallback "VertexLit"
 }
+
+
