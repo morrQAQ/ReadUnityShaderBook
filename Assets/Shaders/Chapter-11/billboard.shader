@@ -78,7 +78,6 @@ Shader "tongchan/11/billboard"
                 *  centerOffs.z;
 
                 v2f o;
-
                 o.pos  =  UnityObjectToClipPos(float4(localPos,  1));
                 o.uv = TRANSFORM_TEX(v.texcoord,_MainTex);
 
