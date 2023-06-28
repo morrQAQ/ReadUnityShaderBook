@@ -11,7 +11,9 @@ Shader "tongchan/12/brightness-saturation-contrast"
 
     SubShader  {
         Pass  {
-            ZTest  Always  Cull  Off  ZWrite  Off
+            ZTest  Always  
+            Cull  Off  
+            ZWrite  Off
 
             CGPROGRAM
             #pragma vertex vert

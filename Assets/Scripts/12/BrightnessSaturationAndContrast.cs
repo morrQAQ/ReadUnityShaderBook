@@ -1,14 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BrightnessSaturationAndContrast : PostEffectsBase
 {
-    public Shader shader;
-    public Material material;
-    public Material Material => CheckShaderAndCreateMaterial(shader, material);
+    public BrightnessSaturationAndContrastSettings settings;
 
+    protected override void ApplySettings()
+    {
+        Material.SetFloat("_Brightness", settings.brightness);
+        Material.SetFloat("_Saturation", settings.saturation);
+        Material.SetFloat("_Contrast", settings.contrast);
+    }
+}
 
+[System.Serializable]
+public class BrightnessSaturationAndContrastSettings
+{
     [Range(0.0f, 3.0f)]
     public float brightness = 1.0f;
 
@@ -17,21 +23,4 @@ public class BrightnessSaturationAndContrast : PostEffectsBase
 
     [Range(0.0f, 3.0f)]
     public float contrast = 1.0f;
-
-    void OnRenderImage(RenderTexture src, RenderTexture dest)
-    {
-        if (Material != null)
-        {
-            Material.SetFloat("_Brightness", brightness);
-            Material.SetFloat("_Saturation", saturation);
-            Material.SetFloat("_Contrast", contrast);
-
-            Graphics.Blit(src, dest, Material);
-        }
-        else
-        {
-            Graphics.Blit(src, dest);
-        }
-    }
-
 }

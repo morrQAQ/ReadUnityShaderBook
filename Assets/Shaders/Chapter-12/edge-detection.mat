@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: brightness-saturation-contrast
-  m_Shader: {fileID: 4800000, guid: 487efd55779fa4f68a02d020e52a0fc9, type: 3}
+  m_Name: edge-detection
+  m_Shader: {fileID: 4800000, guid: b3324c438483947ec90e4ab962595792, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
