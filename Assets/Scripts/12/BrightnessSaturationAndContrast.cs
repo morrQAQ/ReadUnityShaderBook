@@ -4,11 +4,13 @@ public class BrightnessSaturationAndContrast : PostEffectsBase
 {
     public BrightnessSaturationAndContrastSettings settings;
 
-    protected override void ApplySettings()
+    protected override void ApplySettings(RenderTexture src, RenderTexture dest)
     {
         Material.SetFloat("_Brightness", settings.brightness);
         Material.SetFloat("_Saturation", settings.saturation);
         Material.SetFloat("_Contrast", settings.contrast);
+
+        Graphics.Blit(src, dest, Material);
     }
 }
 

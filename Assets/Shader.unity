@@ -1371,6 +1371,7 @@ GameObject:
   - component: {fileID: 979372754}
   - component: {fileID: 979372757}
   - component: {fileID: 979372758}
+  - component: {fileID: 979372759}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -1480,6 +1481,25 @@ MonoBehaviour:
     edgesOnly: 1
     edgeColor: {r: 1, g: 0.13679248, b: 0.13679248, a: 1}
     backgroundColor: {r: 0, g: 0, b: 0, a: 1}
+--- !u!114 &979372759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979372753}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37326fe349c154013ad49fbb63f88a36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shader: {fileID: 4800000, guid: 02b7157f5cd894e0da701ea4c44bad95, type: 3}
+  material: {fileID: 2100000, guid: 3cdd99620a1544185a4ff059b23cd254, type: 2}
+  edition: 0
+  settings:
+    downSample: 8
+    iterations: 4
+    blurSpread: 3
 --- !u!1 &1156134545
 GameObject:
   m_ObjectHideFlags: 0

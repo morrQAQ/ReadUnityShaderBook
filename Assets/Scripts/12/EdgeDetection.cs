@@ -6,7 +6,7 @@ public class EdgeDetection : PostEffectsBase
 {
     public EdgeDetectionSettings settings;
 
-    protected override void ApplySettings()
+    protected override void ApplySettings(RenderTexture src, RenderTexture dest)
     {
         Material.SetFloat("_EdgeOnly", settings.edgesOnly);
         Material.SetColor("_EdgeColor", settings.edgeColor);

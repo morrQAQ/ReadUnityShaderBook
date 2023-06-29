@@ -24,19 +24,14 @@ public abstract class PostEffectsBase : MonoBehaviour
     //     // return SystemInfo.supportsImageEffects || SystemInfo.supportsRenderTextures;
     // }
 
-    protected abstract void ApplySettings();
+    protected abstract void ApplySettings(RenderTexture src, RenderTexture dest);
 
     protected void OnRenderImage(RenderTexture src, RenderTexture dest)
     {
         if (Material != null)
-        {
-            ApplySettings();
-            Graphics.Blit(src, dest, Material);
-        }
+            ApplySettings(src, dest);
         else
-        {
             Graphics.Blit(src, dest);
-        }
     }
 
     /// <summary>
@@ -52,9 +47,11 @@ public abstract class PostEffectsBase : MonoBehaviour
         Material Creat()
         {
             //TODO why???????????????????????????????????????????????
+
             //https://stackoverflow.com/questions/40676426/what-is-the-difference-between-x-is-null-and-x-null
-            //The expression material == null returns true if the value of material is null,
-            // while the expression material is null returns true if the runtime type of material is null
+            // is null checks if the variable or object is of a nullable type and has a value of null.
+            // == null compares the variable or object to the literal value of null.
+
             //false true true null
             Debug.Log((material is null) + "-- " + (material == null) + (material.Equals(null)) + (material));
             material = new Material(shader);
