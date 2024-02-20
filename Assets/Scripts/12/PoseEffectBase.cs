@@ -42,18 +42,14 @@ public abstract class PostEffectsBase : MonoBehaviour
         if (!shader || !shader.isSupported) return null;    //shader check
         if (material && material.shader != shader) return null;    //mat check
 
-        return material ??= Creat();
+        return ReferenceEquals(material, null) ? Creat() : material;
 
         Material Creat()
         {
-            //TODO why???????????????????????????????????????????????
-
             //https://stackoverflow.com/questions/40676426/what-is-the-difference-between-x-is-null-and-x-null
             // is null checks if the variable or object is of a nullable type and has a value of null.
             // == null compares the variable or object to the literal value of null.
 
-            //false true true null
-            Debug.Log((material is null) + "-- " + (material == null) + (material.Equals(null)) + (material));
             material = new Material(shader);
             material.hideFlags = HideFlags.DontSave;
             return material;
