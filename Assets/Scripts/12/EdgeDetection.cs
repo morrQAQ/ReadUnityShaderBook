@@ -12,7 +12,7 @@ public class EdgeDetection : PostEffectsBase
         Material.SetColor("_EdgeColor", settings.edgeColor);
         Material.SetColor("_BackgroundColor", settings.backgroundColor);
 
-
+        Graphics.Blit(src, dest, material);
     }
 }
 
